@@ -1,0 +1,98 @@
+{
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": [],
+    "production": [
+      "default",
+      "!{projectRoot}/**/*.spec.ts",
+      "!{projectRoot}/**/*.test.ts",
+      "!{projectRoot}/jest.config.ts",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/eslint.config.js"
+    ]
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "eslint:lint"
+      }
+    }
+  ],
+  "release": {
+    "projectsRelationship": "independent",
+    "groups": {
+      "cli": {
+        "projects": ["@embratur/agent-skills"],
+        "releaseTagPattern": "v{version}"
+      },
+      "skills-catalog": {
+        "projects": ["@embratur/skills-catalog"],
+        "releaseTagPattern": "skills-catalog-v{version}"
+      }
+    },
+    "git": {
+      "commit": true,
+      "tag": true
+    },
+    "version": {
+      "conventionalCommits": true,
+      "fallbackCurrentVersionResolver": "disk"
+    },
+    "conventionalCommits": {
+      "types": {
+        "perf": {
+          "semverBump": "patch"
+        },
+        "docs": {
+          "semverBump": "none"
+        },
+        "refactor": {
+          "semverBump": "patch"
+        },
+        "chore": { "semverBump": "patch", "changelog": { "hidden": true } },
+        "test": false,
+        "style": false,
+        "build": false,
+        "ci": false
+      }
+    },
+    "changelog": {
+      "automaticFromRef": true,
+      "projectChangelogs": {
+        "createRelease": "github"
+      },
+      "workspaceChangelog": false
+    }
+  },
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "cache": true,
+      "inputs": ["production", "^production"]
+    },
+    "nx-release-publish": {
+      "dependsOn": ["post-build"],
+      "options": {
+        "packageRoot": "{projectRoot}/dist"
+      },
+      "inputs": ["production", "^production"]
+    },
+    "test": {
+      "cache": true,
+      "inputs": ["default", "^production"]
+    },
+    "eslint:lint": {
+      "cache": true,
+      "inputs": ["default", "^production"]
+    },
+    "@nx/js:tsc": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    }
+  },
+  "defaultBase": "main",
+  "analytics": false
+}

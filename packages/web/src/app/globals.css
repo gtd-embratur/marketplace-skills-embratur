@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-embratur-500: #00a859;
+  --color-embratur-600: #008f4b;
+  --color-embratur-700: #007a3f;
+  --color-neutral-25: #fcfcfd;
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f2f4f7;
+  --color-neutral-200: #eaecf0;
+  --color-neutral-300: #d0d5dd;
+  --color-neutral-400: #98a2b3;
+  --color-neutral-500: #667085;
+  --color-neutral-600: #475467;
+  --color-neutral-700: #344054;
+  --color-neutral-800: #1d2939;
+  --color-neutral-900: #101828;
+  --color-neutral-950: #0c111d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply bg-neutral-25 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-50;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-embratur-500 text-white font-medium text-sm rounded-radius-md shadow-shadow-xs hover:bg-embratur-600 active:bg-embratur-700 transition-colors focus:outline-none focus:ring-2 focus:ring-embratur-500 focus:ring-offset-2 dark:focus:ring-offset-neutral-950;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-neutral-700 font-medium text-sm rounded-radius-md border border-neutral-300 shadow-shadow-xs hover:bg-neutral-50 active:bg-neutral-100 transition-colors focus:outline-none focus:ring-2 focus:ring-embratur-500 focus:ring-offset-2 dark:bg-neutral-900 dark:text-neutral-200 dark:border-neutral-700 dark:hover:bg-neutral-800 dark:active:bg-neutral-700 dark:focus:ring-offset-neutral-950;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 text-neutral-700 font-medium text-sm rounded-radius-md hover:bg-neutral-100 active:bg-neutral-200 transition-colors focus:outline-none focus:ring-2 focus:ring-embratur-500 focus:ring-offset-2 dark:text-neutral-300 dark:hover:bg-neutral-800 dark:active:bg-neutral-700 dark:focus:ring-offset-neutral-950;
+  }
+
+  .card {
+    @apply bg-white rounded-radius-xl border border-neutral-200 shadow-shadow-sm dark:bg-neutral-900 dark:border-neutral-800;
+  }
+
+  .chip {
+    @apply inline-flex items-center px-3 py-1 rounded-radius-full text-xs font-medium;
+  }
+
+  .chip-embratur {
+    @apply chip bg-embratur-50 text-embratur-700 border border-embratur-200 dark:bg-embratur-950 dark:text-embratur-300 dark:border-embratur-800;
+  }
+
+  .chip-neutral {
+    @apply chip bg-neutral-100 text-neutral-700 border border-neutral-200 dark:bg-neutral-800 dark:text-neutral-200 dark:border-neutral-700;
+  }
+
+  .input-field {
+    @apply w-full px-3.5 py-2.5 text-sm text-neutral-900 bg-white border border-neutral-300 rounded-radius-lg shadow-shadow-xs placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-embratur-500 focus:border-embratur-500 transition-colors dark:bg-neutral-900 dark:text-neutral-100 dark:border-neutral-700 dark:placeholder:text-neutral-500 dark:focus:border-embratur-500;
+  }
+
+  .section-title {
+    @apply text-display-xs text-neutral-900 dark:text-neutral-50;
+  }
+
+  .section-subtitle {
+    @apply text-text-lg text-neutral-500 dark:text-neutral-400;
+  }
+}

@@ -41,10 +41,10 @@ O agente lê automaticamente o frontmatter e **ativa a skill quando o contexto d
 
 ### Skill temática vs skill de processo
 
-| Tipo | Prefixo | Função | Exemplos |
-|---|---|---|---|
-| **Temática** | `squad-*` | Ativa um time de personas especializadas | `squad-backend`, `squad-qualidade` |
-| **Processo** | substantivo descritivo | Conduz um ritual ou produz artefato | `spec-rastreavel`, `revisao-pre-pr` |
+| Tipo         | Prefixo                | Função                                   | Exemplos                            |
+| ------------ | ---------------------- | ---------------------------------------- | ----------------------------------- |
+| **Temática** | `squad-*`              | Ativa um time de personas especializadas | `squad-backend`, `squad-qualidade`  |
+| **Processo** | substantivo descritivo | Conduz um ritual ou produz artefato      | `spec-rastreavel`, `revisao-pre-pr` |
 
 Skill temática responde **"quem faz?"**. Skill de processo responde **"como organizamos?"**.
 
@@ -88,55 +88,55 @@ Nem toda skill tem o mesmo peso. Antes do catálogo, esta é a foto que mostra o
 
 Pular qualquer uma destas quebra o ciclo de qualidade. Trate como portão.
 
-| Skill | Quando obrigatória | Risco de pular |
-|---|---|---|
-| `onboarding-de-projeto` | Primeira vez que o projeto adota o pacote | Próximas skills chutam comandos, convenções, gates |
-| `spec-rastreavel` | Antes de toda feature não-trivial (3+ arquivos, schema novo, endpoint público) | Implementação sem critério de aceite → retrabalho |
-| `aceite-contra-spec` | Depois de implementar SPEC | PR sem validação de que cumpriu o contrato |
-| `revisao-pre-pr` | Antes de TODO pull request | Bug, regressão ou vulnerabilidade indo pra produção |
+| Skill                   | Quando obrigatória                                                             | Risco de pular                                      |
+| ----------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------- |
+| `onboarding-de-projeto` | Primeira vez que o projeto adota o pacote                                      | Próximas skills chutam comandos, convenções, gates  |
+| `spec-rastreavel`       | Antes de toda feature não-trivial (3+ arquivos, schema novo, endpoint público) | Implementação sem critério de aceite → retrabalho   |
+| `aceite-contra-spec`    | Depois de implementar SPEC                                                     | PR sem validação de que cumpriu o contrato          |
+| `revisao-pre-pr`        | Antes de TODO pull request                                                     | Bug, regressão ou vulnerabilidade indo pra produção |
 
 ### 🟠 Essenciais (4) — usar sempre que cabe
 
 Compõem a fábrica de software. Trabalho real passa por essas.
 
-| Skill | Quando usar |
-|---|---|
-| `squad-arquitetura` | Antes de qualquer decisão arquitetural ou feature com 2+ componentes |
-| `squad-backend` | Toda vez que mexer em código de servidor |
-| `squad-frontend` | Toda vez que mexer em UI ou estado de cliente |
-| `squad-qualidade` | Definir matriz de teste antes da implementação + auditoria de segurança proativa |
+| Skill               | Quando usar                                                                      |
+| ------------------- | -------------------------------------------------------------------------------- |
+| `squad-arquitetura` | Antes de qualquer decisão arquitetural ou feature com 2+ componentes             |
+| `squad-backend`     | Toda vez que mexer em código de servidor                                         |
+| `squad-frontend`    | Toda vez que mexer em UI ou estado de cliente                                    |
+| `squad-qualidade`   | Definir matriz de teste antes da implementação + auditoria de segurança proativa |
 
 ### 🟡 Complementares contextuais (7) — usar quando o sinal aparecer
 
 Entram em situações específicas. Sem o sinal, são ruído.
 
-| Skill | Sinal pra ativar |
-|---|---|
-| `modelo-de-ameacas` | Feature toca auth, PII, billing, upload, multi-tenant, IA com input externo |
-| `mapa-arquitetural` | Projeto brownfield novo OU refactor que toca 3+ módulos |
-| `squad-plataforma` | Pipeline novo, Dockerfile, deploy, observabilidade, cloud |
-| `squad-produto` | Feature grande precisa virar MVP, backlog precisa ranking, vai lançar |
-| `squad-documentacao` | API mudou, ADR precisa registrar decisão, demo pra stakeholder |
-| `squad-conteudo-ux` | Microcopy dúbia, naming travado, taxonomia caótica |
-| `squad-metricas` | Antes de lançar feature importante ("o que vamos medir?") |
+| Skill                | Sinal pra ativar                                                            |
+| -------------------- | --------------------------------------------------------------------------- |
+| `modelo-de-ameacas`  | Feature toca auth, PII, billing, upload, multi-tenant, IA com input externo |
+| `mapa-arquitetural`  | Projeto brownfield novo OU refactor que toca 3+ módulos                     |
+| `squad-plataforma`   | Pipeline novo, Dockerfile, deploy, observabilidade, cloud                   |
+| `squad-produto`      | Feature grande precisa virar MVP, backlog precisa ranking, vai lançar       |
+| `squad-documentacao` | API mudou, ADR precisa registrar decisão, demo pra stakeholder              |
+| `squad-conteudo-ux`  | Microcopy dúbia, naming travado, taxonomia caótica                          |
+| `squad-metricas`     | Antes de lançar feature importante ("o que vamos medir?")                   |
 
 ### 🔵 Rituais semanais (2) — disciplina
 
 Não obrigatórias por feature, mas obrigatórias **por semana**.
 
-| Skill | Quando |
-|---|---|
-| `auditoria-do-setup` | Sexta-feira — pontuação do projeto em 5 dimensões |
-| `evolucao-semanal` | Logo depois da auditoria — escolhe UMA capacidade nova pra construir |
+| Skill                | Quando                                                               |
+| -------------------- | -------------------------------------------------------------------- |
+| `auditoria-do-setup` | Sexta-feira — pontuação do projeto em 5 dimensões                    |
+| `evolucao-semanal`   | Logo depois da auditoria — escolhe UMA capacidade nova pra construir |
 
 ### ⚪ Reflexão crítica (2) — quando precisar pensar diferente
 
 Não fazem parte do fluxo padrão. Entram pra estressar uma ideia ou ouvir várias perspectivas.
 
-| Skill | Quando |
-|---|---|
-| `squad-revisao-critica` | Antes de decisão irreversível ou cara |
-| `mesa-de-personas` | Brainstorm livre com várias personas conversando |
+| Skill                   | Quando                                           |
+| ----------------------- | ------------------------------------------------ |
+| `squad-revisao-critica` | Antes de decisão irreversível ou cara            |
+| `mesa-de-personas`      | Brainstorm livre com várias personas conversando |
 
 ### Foto resumida pra novato
 
@@ -147,7 +147,7 @@ Se você nunca usou skills antes, **comece usando só estas 4**:
 3. `aceite-contra-spec` (depois de codar)
 4. `revisao-pre-pr` (antes do PR)
 
-Depois de 1-2 semanas com isso fluindo, vá adicionando as essenciais (squad-*) e contextuais (modelo-de-ameacas, mapa-arquitetural, etc.) conforme o trabalho real pedir.
+Depois de 1-2 semanas com isso fluindo, vá adicionando as essenciais (squad-\*) e contextuais (modelo-de-ameacas, mapa-arquitetural, etc.) conforme o trabalho real pedir.
 
 ---
 
@@ -159,13 +159,13 @@ Esta seção existe porque **a maior causa de skill que "não funciona" é promp
 
 Antes de mandar um prompt, garanta 5 elementos:
 
-| Letra | O que é | Exemplo |
-|---|---|---|
-| **C — Contexto** | O quê e por quê. Estado atual e objetivo. | "Vou exportar relatórios CSV pros analistas porque hoje eles copiam manual do dashboard" |
-| **A — Ação** | Verbo no infinitivo + objeto direto. | "implementar endpoint POST /relatorios" |
-| **R — Restrições** | Tecnologia, prazo, dependências, limites. | "Node 20 + Postgres, sem mudar provedor cloud, deadline próxima sexta" |
-| **D — Done-when** | Critério verificável de pronto. | "endpoint retorna 202 + job id, gera CSV em até 30s pra 10k linhas" |
-| **O — Output** | Arquivo, formato, gate esperado. | "código + teste + SPEC atualizada + commit em PT-BR" |
+| Letra              | O que é                                   | Exemplo                                                                                  |
+| ------------------ | ----------------------------------------- | ---------------------------------------------------------------------------------------- |
+| **C — Contexto**   | O quê e por quê. Estado atual e objetivo. | "Vou exportar relatórios CSV pros analistas porque hoje eles copiam manual do dashboard" |
+| **A — Ação**       | Verbo no infinitivo + objeto direto.      | "implementar endpoint POST /relatorios"                                                  |
+| **R — Restrições** | Tecnologia, prazo, dependências, limites. | "Node 20 + Postgres, sem mudar provedor cloud, deadline próxima sexta"                   |
+| **D — Done-when**  | Critério verificável de pronto.           | "endpoint retorna 202 + job id, gera CSV em até 30s pra 10k linhas"                      |
+| **O — Output**     | Arquivo, formato, gate esperado.          | "código + teste + SPEC atualizada + commit em PT-BR"                                     |
 
 Não é receita rígida. É checklist mental antes de digitar.
 
@@ -206,41 +206,51 @@ Não é receita rígida. É checklist mental antes de digitar.
 #### Exemplo 1 — Implementar feature
 
 ❌ **Ruim:**
+
 > "preciso de um sistema de exportação"
 
 ✅ **Bom:**
+
 > "Vou implementar exportação de relatórios CSV pros analistas. Stack atual: Node 20 + Fastify + Postgres + Knex. Volume esperado: até 10k linhas por export, precisa rodar em background pra não bloquear a UI. Não quero adicionar serviço novo (sem fila externa nova; usa pg_cron ou job in-process). Antes de codar, ative `spec-rastreavel` pra Laura me ajudar a desenhar — quero SPEC com requisitos rastreáveis e plano de implementação por persona."
 
 #### Exemplo 2 — Pedir revisão
 
 ❌ **Ruim:**
+
 > "revisa esse código"
 
 ✅ **Bom:**
+
 > "Branch `feature/exportar-relatorios`, base `main`. Diff tem ~280 linhas: 1 endpoint novo (`POST /relatorios`), 1 service, 1 migration, 2 testes. Ative `revisao-pre-pr`. Foco especial: (1) SQL injection na geração do CSV, (2) auth no endpoint, (3) idempotência (request duplicada não pode gerar 2 jobs). Critério de bloqueio: qualquer 🔴 ou 2+ 🟠 de Helena."
 
 #### Exemplo 3 — Documentar
 
 ❌ **Ruim:**
+
 > "documenta os endpoints"
 
 ✅ **Bom:**
+
 > "Adicionei 5 endpoints novos em `api/relatorios.ts` (GET /, POST /, GET /:id, PATCH /:id/status, DELETE /:id). Stack: Fastify + zod pra validação. Ative `squad-documentacao` — quero o Felipe atualizando `openapi.yaml` no padrão atual do projeto (veja como `/usuarios` está documentado lá), com exemplos curl reais usando token de dev. Marca como `v0` no path. Error codes precisam aparecer com mensagem e ação sugerida."
 
 #### Exemplo 4 — Pedir threat model
 
 ❌ **Ruim:**
+
 > "isso tá seguro?"
 
 ✅ **Bom:**
+
 > "Vou implementar login com Google OAuth no app público (sem MFA na v1). Usuários são turistas brasileiros — escala esperada 50k MAU. Antes de codar, ative `modelo-de-ameacas`. Helena, lista atacantes realistas pra esse contexto (não quero NSA na lista), abuse paths principais, e mitigações priorizadas por alavancagem. Output em `docs/seguranca/`."
 
 #### Exemplo 5 — Discutir arquitetura
 
 ❌ **Ruim:**
+
 > "monolito ou microserviços?"
 
 ✅ **Bom:**
+
 > "Time atual: 6 devs. Produto: app de turismo MVP, lançou há 3 meses, 5k usuários ativos. Hoje monolito Node em um único repo. Pressão pra extrair o módulo de pagamentos (PCI compliance) e o módulo de busca (precisa de pgvector + workers pesados). Ative `squad-revisao-critica` com `squad-arquitetura`. Quero Álvaro e Lúcia questionando se extração agora faz sentido, e Rafael propondo as 2-3 alternativas com trade-offs. Output: ADR em `docs/adr/` com recomendação."
 
 ### Quando você não sabe qual skill usar
@@ -548,106 +558,106 @@ São 45 personas. Lista por squad:
 
 ### `squad-arquitetura`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Laura | Tech Lead | Coordenação, triagem, Definition of Done |
-| Rafael | Staff Engineer | Decisões irreversíveis, padrões |
-| Diego | Arquiteto de Sistemas | Fluxos, contratos, eventos |
-| Fernanda | Arquiteta de Dados | Schemas, índices, RLS |
-| Thiago | Arquiteto de Integrações | APIs, OAuth, idempotência |
+| Persona  | Papel                    | Especialidade                            |
+| -------- | ------------------------ | ---------------------------------------- |
+| Laura    | Tech Lead                | Coordenação, triagem, Definition of Done |
+| Rafael   | Staff Engineer           | Decisões irreversíveis, padrões          |
+| Diego    | Arquiteto de Sistemas    | Fluxos, contratos, eventos               |
+| Fernanda | Arquiteta de Dados       | Schemas, índices, RLS                    |
+| Thiago   | Arquiteto de Integrações | APIs, OAuth, idempotência                |
 
 ### `squad-backend`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Lucas | Backend Engineer | Endpoints, services, transações |
-| Carlos | DBA | Migrations, queries, RLS |
-| Vinícius | Performance Engineer | Profiling, bundle, load test |
-| Juliana | Data Engineer | ETLs, jobs, qualidade de dados |
-| Gabriel | AI Engineer | LLM, RAG, prompt, evals |
-| André | Search Engineer | Full-text, vetorial, hybrid |
+| Persona  | Papel                | Especialidade                   |
+| -------- | -------------------- | ------------------------------- |
+| Lucas    | Backend Engineer     | Endpoints, services, transações |
+| Carlos   | DBA                  | Migrations, queries, RLS        |
+| Vinícius | Performance Engineer | Profiling, bundle, load test    |
+| Juliana  | Data Engineer        | ETLs, jobs, qualidade de dados  |
+| Gabriel  | AI Engineer          | LLM, RAG, prompt, evals         |
+| André    | Search Engineer      | Full-text, vetorial, hybrid     |
 
 ### `squad-frontend`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Marina | Frontend Engineer | Telas, componentes, hooks |
-| Pablo | UI Engineer | Visual, tokens, dashboards |
-| Isabela | UX Researcher | Jornadas, heurísticas |
-| Ada | Accessibility Engineer | ARIA, contraste, axe-core |
+| Persona | Papel                  | Especialidade              |
+| ------- | ---------------------- | -------------------------- |
+| Marina  | Frontend Engineer      | Telas, componentes, hooks  |
+| Pablo   | UI Engineer            | Visual, tokens, dashboards |
+| Isabela | UX Researcher          | Jornadas, heurísticas      |
+| Ada     | Accessibility Engineer | ARIA, contraste, axe-core  |
 
 ### `squad-plataforma`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Elisa | Cloud Architect | Provedor, FinOps, residência |
-| Marcos | DevOps / SRE | CI/CD, Docker, rollback |
-| Renata | Observability Engineer | Logs, métricas, traces |
+| Persona | Papel                  | Especialidade                |
+| ------- | ---------------------- | ---------------------------- |
+| Elisa   | Cloud Architect        | Provedor, FinOps, residência |
+| Marcos  | DevOps / SRE           | CI/CD, Docker, rollback      |
+| Renata  | Observability Engineer | Logs, métricas, traces       |
 
 ### `squad-qualidade`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Patrícia | QA Lead | Estratégia, triagem, regressão |
-| Ricardo | Test Automation Engineer | Unit, integration, e2e |
-| Helena | Security Engineer | OWASP, RLS, PII |
+| Persona  | Papel                    | Especialidade                  |
+| -------- | ------------------------ | ------------------------------ |
+| Patrícia | QA Lead                  | Estratégia, triagem, regressão |
+| Ricardo  | Test Automation Engineer | Unit, integration, e2e         |
+| Helena   | Security Engineer        | OWASP, RLS, PII                |
 
 ### `squad-produto`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Camila | PM Técnico | User stories, MVP slice |
-| Hugo | Priorização | ICE, Value Equation |
-| Sofia | Lançamento | Checklist em 3 fases |
-| Rui | Audit | TCO, ROI, desperdício |
+| Persona | Papel       | Especialidade           |
+| ------- | ----------- | ----------------------- |
+| Camila  | PM Técnico  | User stories, MVP slice |
+| Hugo    | Priorização | ICE, Value Equation     |
+| Sofia   | Lançamento  | Checklist em 3 fases    |
+| Rui     | Audit       | TCO, ROI, desperdício   |
 
 ### `squad-documentacao`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Beatriz | Technical Writer | README, runbook, changelog |
-| Felipe | API Documentation Engineer | OpenAPI, curl, error codes |
-| Marcos [Specs] | Narrativa estruturada | ADR em 6 blocos |
-| Renato | Doc de usuário | DITA simplificado |
-| Helena [Apresentação] | Demos para stakeholder | Framework Sparkline |
+| Persona               | Papel                      | Especialidade              |
+| --------------------- | -------------------------- | -------------------------- |
+| Beatriz               | Technical Writer           | README, runbook, changelog |
+| Felipe                | API Documentation Engineer | OpenAPI, curl, error codes |
+| Marcos [Specs]        | Narrativa estruturada      | ADR em 6 blocos            |
+| Renato                | Doc de usuário             | DITA simplificado          |
+| Helena [Apresentação] | Demos para stakeholder     | Framework Sparkline        |
 
 ### `squad-conteudo-ux`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Celina | Microcopy | Botão, erro, empty state |
-| Cora | Voz | Tom em 4 dimensões |
-| Elisa [Naming] | Naming | Scoring em 5 dimensões |
-| Bruno | Taxonomia | MECE em 3 níveis |
-| Letícia | Revisão textual | 4 lentes |
+| Persona        | Papel           | Especialidade            |
+| -------------- | --------------- | ------------------------ |
+| Celina         | Microcopy       | Botão, erro, empty state |
+| Cora           | Voz             | Tom em 4 dimensões       |
+| Elisa [Naming] | Naming          | Scoring em 5 dimensões   |
+| Bruno          | Taxonomia       | MECE em 3 níveis         |
+| Letícia        | Revisão textual | 4 lentes                 |
 
 ### `squad-metricas`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Lia | Instrumentação | Tracking plan |
-| Otávio | KPIs | Norte-métrica, AARRR |
-| Vera | Growth / A-B | Feature flags, experimentos |
-| Tomás | DORA | Deployment frequency, MTTR |
-| Clara | Comunidade / DX | Contributor ladder |
-| Enzo | Developer Experience | Developer journey |
+| Persona | Papel                | Especialidade               |
+| ------- | -------------------- | --------------------------- |
+| Lia     | Instrumentação       | Tracking plan               |
+| Otávio  | KPIs                 | Norte-métrica, AARRR        |
+| Vera    | Growth / A-B         | Feature flags, experimentos |
+| Tomás   | DORA                 | Deployment frequency, MTTR  |
+| Clara   | Comunidade / DX      | Contributor ladder          |
+| Enzo    | Developer Experience | Developer journey           |
 
 ### `squad-revisao-critica`
 
-| Persona | Papel | Especialidade |
-|---|---|---|
-| Álvaro | Inversão | Munger, pre-mortem |
-| Lúcia | Princípios | SOLID, YAGNI, Conway |
-| Félix | Red Team | Failure modes |
-| Dante | Desbloqueio | Timeboxing, desacoplamento |
+| Persona | Papel       | Especialidade              |
+| ------- | ----------- | -------------------------- |
+| Álvaro  | Inversão    | Munger, pre-mortem         |
+| Lúcia   | Princípios  | SOLID, YAGNI, Conway       |
+| Félix   | Red Team    | Failure modes              |
+| Dante   | Desbloqueio | Timeboxing, desacoplamento |
 
 ### Colisões de nome
 
-| Nome curto | Como desambiguar |
-|---|---|
-| **Marcos** | Marcos (DevOps, `squad-plataforma`) vs Marcos [Specs] (ADR, `squad-documentacao`) |
+| Nome curto | Como desambiguar                                                                            |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| **Marcos** | Marcos (DevOps, `squad-plataforma`) vs Marcos [Specs] (ADR, `squad-documentacao`)           |
 | **Helena** | Helena (Security, `squad-qualidade`) vs Helena [Apresentação] (demos, `squad-documentacao`) |
-| **Elisa** | Elisa (Cloud, `squad-plataforma`) vs Elisa [Naming] (naming, `squad-conteudo-ux`) |
+| **Elisa**  | Elisa (Cloud, `squad-plataforma`) vs Elisa [Naming] (naming, `squad-conteudo-ux`)           |
 
 Sempre desambigue com o sufixo do papel.
 
@@ -825,12 +835,12 @@ Se duas personas precisam do mesmo arquivo, **serialize**. Uma termina, marca co
 
 ### Substituição contextual
 
-| Em vez de... | Use... | Quando |
-|---|---|---|
-| `squad-backend` | `mesa-de-personas` | Brainstorm antes de implementar |
-| `revisao-pre-pr` | `squad-qualidade` | Durante implementação, não no fim |
-| `spec-rastreavel` | implementação direta | Bug pequeno, < 20 linhas em 1 arquivo |
-| `auditoria-do-setup` | `mapa-arquitetural` | Foco é estrutura do código, não setup do projeto |
+| Em vez de...         | Use...               | Quando                                           |
+| -------------------- | -------------------- | ------------------------------------------------ |
+| `squad-backend`      | `mesa-de-personas`   | Brainstorm antes de implementar                  |
+| `revisao-pre-pr`     | `squad-qualidade`    | Durante implementação, não no fim                |
+| `spec-rastreavel`    | implementação direta | Bug pequeno, < 20 linhas em 1 arquivo            |
+| `auditoria-do-setup` | `mapa-arquitetural`  | Foco é estrutura do código, não setup do projeto |
 
 ### Skills que NUNCA devem rodar juntas
 
@@ -1019,16 +1029,17 @@ Fatie. `squad-produto` pode ajudar Camila a quebrar em PRs menores.
 
 ### Não sei se uso `squad-qualidade` ou `revisao-pre-pr`
 
-| Sinal | Skill |
-|---|---|
-| Meio da implementação, "o que testar?" | `squad-qualidade` |
-| Já terminei, "tá pronto pro PR?" | `revisao-pre-pr` |
-| Auditoria de feature inteira | `squad-qualidade` (Helena) |
-| Auditoria do **diff específico** | `revisao-pre-pr` |
+| Sinal                                  | Skill                      |
+| -------------------------------------- | -------------------------- |
+| Meio da implementação, "o que testar?" | `squad-qualidade`          |
+| Já terminei, "tá pronto pro PR?"       | `revisao-pre-pr`           |
+| Auditoria de feature inteira           | `squad-qualidade` (Helena) |
+| Auditoria do **diff específico**       | `revisao-pre-pr`           |
 
 ### Skill funcionou em Lovable mas não em Replit (ou vice-versa)
 
 Cheque o caminho:
+
 - **Lovable:** skill colada via UI no workspace
 - **Replit:** `/.agents/skills/<nome>/SKILL.md` no projeto
 

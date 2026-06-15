@@ -1,0 +1,19 @@
+{
+  "name": "@embratur/skills-catalog",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Catálogo de Skills da Embratur",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --project tsconfig.lib.json",
+    "generate-registry": "tsx src/generate-registry.ts"
+  },
+  "dependencies": {
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,116 @@
+[
+  {
+    "name": "squad-arquitetura",
+    "description": "Use when o usuário precisa desenhar uma feature, decidir arquitetura, escolher tecnologia, modelar dados ou definir contrato de API ANTES de codar. Ativa um time de arquitetos (Laura como Tech Lead + Rafael Staff + Diego Sistemas + Fernanda Dados + Thiago Integrações) que interrogam o problema, propõem 2-3 abordagens com trade-offs e produzem decisão registrada. Não codifica — produz documento. NÃO use para correções triviais ou implementação direta.",
+    "category": "personas",
+    "path": "skills/(personas)/squad-arquitetura/SKILL.md"
+  },
+  {
+    "name": "squad-backend",
+    "description": "Use when o usuário precisa implementar endpoints, services, lógica de servidor, queries de banco, migrations, pipelines de dados ou features de IA/busca. Ativa o time backend (Lucas, Carlos, Vinícius, Juliana, Gabriel, André) com file ownership por especialidade. Cada persona implementa na sua área e devolve código + teste mínimo. NÃO use para componentes visuais (use `squad-frontend`) nem para design prévio (use `squad-arquitetura`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-backend/SKILL.md"
+  },
+  {
+    "name": "squad-conteudo-ux",
+    "description": "Use when o usuário precisa escrever microcopy de UI (botão, label, mensagem de erro, empty state, tooltip), definir voz/tom do produto, nomear feature/componente/variável semântica, criar taxonomia ou revisar texto de interface. Ativa Celina (microcopy), Cora (voz), Elisa [Naming] (naming), Bruno (taxonomia), Letícia (revisão). NÃO use para documentação técnica (use `squad-documentacao`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-conteudo-ux/SKILL.md"
+  },
+  {
+    "name": "squad-documentacao",
+    "description": "Use when o usuário precisa escrever ou atualizar documentação técnica — README, ADR, runbook, changelog, onboarding, OpenAPI/Swagger, exemplos curl, spec estruturada ou apresentação de feature para stakeholder. Ativa Beatriz (Technical Writer), Felipe (API Docs), Marcos [Specs] (ADRs), Renato (docs de usuário), Helena [Apresentação] (demos para stakeholder). NÃO use para microcopy de UI (use `squad-conteudo-ux`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-documentacao/SKILL.md"
+  },
+  {
+    "name": "squad-frontend",
+    "description": "Use when o usuário precisa implementar telas, componentes, hooks, estado, design tokens, UI/UX, acessibilidade ou animações. Ativa o time de frontend (Marina, Pablo, Isabela, Ada) com file ownership por especialidade. Marina implementa lógica de tela, Pablo cuida do visual, Isabela valida UX, Ada garante acessibilidade. NÃO use para endpoints, banco de dados ou lógica de servidor (use `squad-backend`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-frontend/SKILL.md"
+  },
+  {
+    "name": "squad-metricas",
+    "description": "Use when o usuário precisa definir o que medir (tracking plan, KPIs, métricas AARRR), desenhar experimento A/B, definir feature flag, medir saúde da engenharia (DORA metrics), planejar developer journey ou contributor ladder. Ativa Lia (instrumentação), Otávio (KPIs), Vera (growth/A-B), Tomás (DORA), Clara (comunidade/contributor), Enzo (DX). NÃO use para instrumentação técnica de logs/traces em produção (use `squad-plataforma`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-metricas/SKILL.md"
+  },
+  {
+    "name": "squad-plataforma",
+    "description": "Use when o usuário precisa configurar CI/CD, escrever Dockerfile, configurar deploy, escolher provedor cloud, dimensionar infra, gerenciar secrets, configurar observabilidade (logs, métricas, traces) ou definir SLOs. Ativa o time de infra (Elisa Cloud, Marcos DevOps, Renata Observabilidade). NÃO use para código de aplicação (use `squad-backend`) nem para auditar segurança da aplicação (use `squad-qualidade`).",
+    "category": "personas",
+    "path": "skills/(personas)/squad-plataforma/SKILL.md"
+  },
+  {
+    "name": "squad-produto",
+    "description": "Use when o usuário precisa definir escopo de feature, fatiar feature grande em MVP, priorizar backlog, planejar lançamento, auditar ROI/custo-benefício de decisões ou questionar se algo é V1 vs V2. Ativa o time de produto (Camila PM, Hugo Priorização, Sofia Lançamento, Rui Audit). Esta skill produz artefato textual — não codifica. Para implementação, use `squad-backend` ou `squad-frontend` depois.",
+    "category": "personas",
+    "path": "skills/(personas)/squad-produto/SKILL.md"
+  },
+  {
+    "name": "squad-qualidade",
+    "description": "Use when o usuário precisa de estratégia de testes, cobertura, planejamento de QA, triagem de bug, análise de regressão ou auditoria de segurança proativa (OWASP, RLS, secrets, validação de input). Ativa Patrícia (QA), Ricardo (test automation) e Helena (security). Esta skill cobre garantia de qualidade ANTES e DURANTE a implementação. Para revisão pré-PR, use a skill `revisao-pre-pr`.",
+    "category": "personas",
+    "path": "skills/(personas)/squad-qualidade/SKILL.md"
+  },
+  {
+    "name": "squad-revisao-critica",
+    "description": "Use when o usuário precisa questionar uma decisão antes de comprometer, fazer pre-mortem, red team, debate estruturado entre alternativas, destravar decisão em impasse ou aplicar princípios fundamentais (SOLID, YAGNI, DRY, Lei de Conway, inversão de Munger). Ativa Álvaro (inversão), Lúcia (princípios), Félix (red team) e Dante (desbloqueio). Skill READ-ONLY que produz parecer textual. NÃO use para implementação.",
+    "category": "personas",
+    "path": "skills/(personas)/squad-revisao-critica/SKILL.md"
+  },
+  {
+    "name": "aceite-contra-spec",
+    "description": "Use when o usuário acabou de implementar uma SPEC e precisa de aceite funcional antes da revisão pré-PR. Compara requisitos rastreáveis com diff atual, roda gates declarados (lint/test/build), e produz relatório em docs/specs/validacoes/. Verifica \"cumpre a SPEC?\" — diferente de `revisao-pre-pr` que verifica \"código está seguro e pronto pra merge?\". Não implementa correções — recomenda quem corrige.",
+    "category": "processo",
+    "path": "skills/(processo)/aceite-contra-spec/SKILL.md"
+  },
+  {
+    "name": "auditoria-do-setup",
+    "description": "Use when chega sexta-feira ou quando o usuário sente que o setup do projeto está estagnando. Pontua o estado da fábrica de 0-100 em 5 dimensões — Fundação, Pipeline, Guardrails, Conhecimento, Estrutura — e devolve as 3 lacunas de maior alavancagem para corrigir na próxima semana. Read-only — salva em decisoes/auditorias/AUDIT-YYYY-MM-DD.md. NÃO modifica nenhum arquivo.",
+    "category": "processo",
+    "path": "skills/(processo)/auditoria-do-setup/SKILL.md"
+  },
+  {
+    "name": "evolucao-semanal",
+    "description": "Use when chega sexta-feira logo depois de `auditoria-do-setup`. Conduz entrevista semanal de 5 perguntas sobre a semana que passou e identifica UMA capacidade nova para construir na próxima (skill, hook, comando ou contexto). Cada execução = um item entregue na semana seguinte. NÃO constrói nada agora — produz a especificação do que será construído.",
+    "category": "processo",
+    "path": "skills/(processo)/evolucao-semanal/SKILL.md"
+  },
+  {
+    "name": "mapa-arquitetural",
+    "description": "Use when o usuário herda codebase, vai refatorar 3+ módulos, quer \"extrair serviço\" ou \"modularizar\", ou quando `auditoria-do-setup` apontou acoplamento alto. Produz inventário estrutural com componentes, acoplamento, duplicação de domínio, bounded contexts e plano de decomposição incremental. Read-only — salva em docs/arquitetura/MAPA-YYYY-MM-DD.md. NÃO modifica código.",
+    "category": "processo",
+    "path": "skills/(processo)/mapa-arquitetural/SKILL.md"
+  },
+  {
+    "name": "mesa-de-personas",
+    "description": "Use when o usuário precisa de discussão entre múltiplas personas especialistas antes de codar — brainstorm técnico, code review conversacional, debate de arquitetura, onboarding de feature complexa. Ativa modo conversacional onde Laura coordena e personas se identificam pelo nome em primeira pessoa, colaborando entre si. Sequencial, não paralelo. NÃO use para implementação direta (use `squad-backend` ou `squad-frontend`).",
+    "category": "processo",
+    "path": "skills/(processo)/mesa-de-personas/SKILL.md"
+  },
+  {
+    "name": "modelo-de-ameacas",
+    "description": "Use when o usuário vai implementar feature sensível — auth, registro, recuperação de senha, MFA, SSO, OAuth, PII, dados financeiros/saúde, upload, exportação, multi-tenant, integração externa ou IA com input de usuário. Produz threat model coordenado por Helena com ativos, trust boundaries, abuse paths e mitigações priorizadas. Read-only — salva em docs/seguranca/AMEACAS-feature-YYYY-MM-DD.md. NÃO use para mudanças triviais.",
+    "category": "processo",
+    "path": "skills/(processo)/modelo-de-ameacas/SKILL.md"
+  },
+  {
+    "name": "onboarding-de-projeto",
+    "description": "Use when o usuário acabou de adicionar este pacote de skills a um projeto novo e precisa preparar a estrutura. Conduz entrevista de 7 perguntas, gera CLAUDE.md preenchido, cria estrutura de pastas (contextos/, decisoes/, docs/specs/, docs/adr/) e ativa o ciclo de trabalho. Leva ~15 minutos. NÃO use se o projeto já tem CLAUDE.md preenchido.",
+    "category": "processo",
+    "path": "skills/(processo)/onboarding-de-projeto/SKILL.md"
+  },
+  {
+    "name": "revisao-pre-pr",
+    "description": "Use when o usuário vai abrir PR, fazer push para branch protegida ou quer segunda opinião sobre código recém-escrito. Ativa equipe de revisão multi-dimensão — Helena (segurança), Patrícia (QA), Vinícius (performance) e Marcos (infra) conforme o diff. Cada uma produz parecer com severidade (crítico/alto/médio/baixo). Consolida veredicto agregado. NÃO use para validação contra SPEC (use `aceite-contra-spec`).",
+    "category": "processo",
+    "path": "skills/(processo)/revisao-pre-pr/SKILL.md"
+  },
+  {
+    "name": "spec-rastreavel",
+    "description": "Use when o usuário vai começar uma feature ou mudança não-trivial — antes de codar. Inicia o fluxo de spec-driven development. Faz triagem de complexidade, decide nível de cerimônia, interroga o problema com arquitetos (Laura, Diego, Fernanda, Thiago, Rafael) e produz SPEC rastreável em docs/specs/SPEC-NNN-slug.md. NÃO codifica — produz contrato textual. NÃO use para typo, rename ou mudança em 1 arquivo.",
+    "category": "processo",
+    "path": "skills/(processo)/spec-rastreavel/SKILL.md"
+  }
+]

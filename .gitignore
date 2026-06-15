@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.swc/
+
+# Nx
+.nx/cache
+.nx/workspace-data
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Env
+.env*.local
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor / sessions
+.claude/
+.playwright-mcp/
+.idea/
+.vscode/
+
+# Test screenshots
+*.png
+!packages/**/*.png

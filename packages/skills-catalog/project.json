@@ -1,0 +1,26 @@
+{
+  "name": "@embratur/skills-catalog",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/skills-catalog/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist",
+        "main": "src/index.ts",
+        "tsConfig": "tsconfig.lib.json",
+        "assets": ["skills/**/*"]
+      }
+    },
+    "generate-registry": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx src/generate-registry.ts",
+        "cwd": "packages/skills-catalog"
+      }
+    }
+  }
+}

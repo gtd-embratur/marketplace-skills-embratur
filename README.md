@@ -1,107 +1,123 @@
-# Embratur Skills
+# Embratur Skills Marketplace
 
-Pacote oficial de **skills** da Embratur para acelerar o desenvolvimento de software com agentes de IA.
+O **Marketplace de Skills da Embratur** é um registry seguro e validado de capabilities para agentes de IA de codificação profissional. Estenda o **Claude Code**, **Cursor**, **Copilot** e mais com absoluta confiança.
 
-Compatível com:
+## O que são Skills?
 
-- [**Lovable**](https://lovable.dev) — workspace-scoped skills
-- [**Replit Agent**](https://replit.com) — diretório `/.agents/skills/`
-- [**Claude Code**](https://claude.ai/code), [**Codex CLI**](https://github.com/openai/codex), [**Cursor**](https://cursor.sh) e qualquer outro agente que siga o padrão aberto SKILL.md
+Skills são instruções e recursos empacotados que estendem as capacidades de agentes de IA. Pense nelas como **plugins para seu assistente de IA** — elas ensinam seu agente novos fluxos de trabalho, padrões e conhecimento especializado.
 
-## O que tem aqui
+## Segurança e Confiança
 
-19 skills em PT-BR, organizadas em duas famílias:
+A segurança do seu ambiente é nossa prioridade máxima. Diferente de marketplaces abertos, o **Embratur Skills** é uma biblioteca gerenciada e blindada: 100% open source (sem binários), análise estática no CI/CD, integridade imutável via lockfiles e hashing de conteúdo, e prompts curados por humanos.
 
-### 🧑‍💼 10 skills de personas (a fábrica)
+## Agentes Suportados
 
-Cada skill representa um time temático com personas especializadas. Use quando quiser delegar uma tarefa para o "papel" certo.
+- **Claude Code**
+- **Cursor**
+- **GitHub Copilot**
+- **Lovable**
+- **Replit Agent**
+- **Qualquer outro agente que siga o padrão SKILL.md**
 
-| Skill | Personas embutidas | Quando usar |
-|---|---|---|
-| [`squad-arquitetura`](skills/squad-arquitetura/SKILL.md) | Laura, Rafael, Diego, Fernanda, Thiago | Desenhar feature antes de codar |
-| [`squad-backend`](skills/squad-backend/SKILL.md) | Lucas, Carlos, Vinícius, Juliana, Gabriel, André | Implementar API, banco, lógica de servidor |
-| [`squad-frontend`](skills/squad-frontend/SKILL.md) | Marina, Pablo, Isabela, Ada | Construir telas, componentes, UX |
-| [`squad-plataforma`](skills/squad-plataforma/SKILL.md) | Elisa, Marcos, Renata | Cloud, CI/CD, observabilidade |
-| [`squad-qualidade`](skills/squad-qualidade/SKILL.md) | Patrícia, Ricardo, Helena | Testes, segurança, regressão |
-| [`squad-produto`](skills/squad-produto/SKILL.md) | Camila, Hugo, Sofia, Rui | Escopo, priorização, lançamento |
-| [`squad-documentacao`](skills/squad-documentacao/SKILL.md) | Beatriz, Felipe, Marcos [Specs], Renato, Helena [Apresentação] | README, ADR, OpenAPI, demos |
-| [`squad-conteudo-ux`](skills/squad-conteudo-ux/SKILL.md) | Celina, Cora, Elisa [Naming], Bruno, Letícia | Microcopy, voz, naming, taxonomia |
-| [`squad-metricas`](skills/squad-metricas/SKILL.md) | Lia, Otávio, Vera, Tomás, Clara, Enzo | Tracking, KPIs, A/B, DORA |
-| [`squad-revisao-critica`](skills/squad-revisao-critica/SKILL.md) | Álvaro, Lúcia, Félix, Dante | Pre-mortem, red team, debate |
+## Catálogo de Skills
 
-### 🛠️ 9 skills de processo (o fluxo)
+### 🧑‍💼 Personas (A Fábrica)
 
-Skills que organizam o ciclo de vida — onboarding, especificação, validação, revisão, auditoria.
+Skills que representam times temáticos com personas especializadas.
 
-| Skill | Quando usar |
-|---|---|
-| [`onboarding-de-projeto`](skills/onboarding-de-projeto/SKILL.md) | Primeira vez em um projeto — gera CLAUDE.md e estrutura |
-| [`mapa-arquitetural`](skills/mapa-arquitetural/SKILL.md) | Antes de refatorações grandes em projeto brownfield |
-| [`spec-rastreavel`](skills/spec-rastreavel/SKILL.md) | Antes de codar feature não-trivial — produz SPEC rastreável |
-| [`modelo-de-ameacas`](skills/modelo-de-ameacas/SKILL.md) | Antes de feature sensível (auth, PII, billing) — threat model |
-| [`mesa-de-personas`](skills/mesa-de-personas/SKILL.md) | Tarefa que precisa de múltiplas personas conversando |
-| [`aceite-contra-spec`](skills/aceite-contra-spec/SKILL.md) | Depois de implementar — aceite contra SPEC |
-| [`revisao-pre-pr`](skills/revisao-pre-pr/SKILL.md) | Antes de PR — revisão multi-dimensão (segurança, QA, performance) |
-| [`auditoria-do-setup`](skills/auditoria-do-setup/SKILL.md) | Sexta-feira — pontua o setup do projeto em 5 dimensões |
-| [`evolucao-semanal`](skills/evolucao-semanal/SKILL.md) | Depois de auditar — escolhe UMA capacidade nova pra construir |
+| Skill                   | Descrição                                  |
+| ----------------------- | ------------------------------------------ |
+| `squad-arquitetura`     | Desenhar feature antes de codar            |
+| `squad-backend`         | Implementar API, banco, lógica de servidor |
+| `squad-frontend`        | Construir telas, componentes, UX           |
+| `squad-plataforma`      | Cloud, CI/CD, observabilidade              |
+| `squad-qualidade`       | Testes, segurança, regressão               |
+| `squad-produto`         | Escopo, priorização, lançamento            |
+| `squad-documentacao`    | README, ADR, OpenAPI, demos                |
+| `squad-conteudo-ux`     | Microcopy, voz, naming, taxonomia          |
+| `squad-metricas`        | Tracking, KPIs, A/B, DORA                  |
+| `squad-revisao-critica` | Pre-mortem, red team, debate               |
 
-## Como instalar
+### 🛠️ Processo (O Fluxo)
 
-### No Lovable
+Skills que organizam o ciclo de vida do desenvolvimento.
 
-1. No chat do seu projeto Lovable, abra a sidebar **Skills**.
-2. Para cada skill que quer adicionar, clique **Create skill** e cole o conteúdo do `SKILL.md` correspondente.
-3. O Lovable indexa o frontmatter (`name`, `description`) e ativa a skill automaticamente quando o contexto bate com a descrição.
+| Skill                   | Descrição                                 |
+| ----------------------- | ----------------------------------------- |
+| `onboarding-de-projeto` | Primeira vez em um projeto                |
+| `mapa-arquitetural`     | Antes de refatorações grandes             |
+| `spec-rastreavel`       | Antes de codar feature não-trivial        |
+| `modelo-de-ameacas`     | Antes de feature sensível (auth, PII)     |
+| `mesa-de-personas`      | Tarefa que precisa de múltiplas personas  |
+| `aceite-contra-spec`    | Depois de implementar                     |
+| `revisao-pre-pr`        | Antes de PR                               |
+| `auditoria-do-setup`    | Auditoria do setup do projeto             |
+| `evolucao-semanal`      | Escolhe uma capacidade nova pra construir |
 
-Alternativa via repo: faça fork deste repositório, conecte-o ao Lovable como fonte de skills do workspace, e o catálogo aparece pronto.
+## Início Rápido
 
-📖 Doc oficial: https://lovable.dev/blog/introducing-skills
-
-### No Replit Agent
-
-1. Clone este repo no seu projeto Replit, ou copie o conteúdo da pasta `skills/`.
-2. Coloque cada skill em `.agents/skills/<nome>/SKILL.md` na raiz do projeto Replit.
-3. O Replit Agent passa a descobrir as skills automaticamente.
-
-Exemplo via terminal Replit:
+### Instalar Skills no Seu Projeto
 
 ```bash
-git clone https://github.com/gtd-embratur/marketplace-skills-embratur /tmp/embratur-skills
-mkdir -p .agents/skills
-cp -r /tmp/embratur-skills/skills/* .agents/skills/
+npx @embratur/agent-skills
 ```
 
-📖 Doc oficial: https://docs.replit.com/core-concepts/agent/skills
+Isso lança um assistente interativo:
 
-### No Claude Code / Codex CLI / Cursor
+1. **Escolha Ação** — "Instalar skills" ou "Atualizar skills instaladas"
+2. **Navegue e Selecione** — Filtre por categoria ou pesquise
+3. **Escolha os agentes** — Selecione os agentes alvo (Cursor, Claude Code, etc.)
+4. **Método de instalação** — Copiar (recomendado) ou Symlink
+5. **Escopo** — Global (home do usuário) ou Local (apenas no projeto)
 
-Estas ferramentas leem skills da raiz do projeto ou de plugins. Você pode:
+### Opções da CLI
 
-- **Por projeto**: copiar a pasta `skills/` para a raiz do seu repo.
-- **Global**: clonar este repo em `~/.claude/skills/` (Claude Code), `~/.codex/skills/` (Codex) ou equivalente.
+```bash
+# Modo interativo (padrão)
+npx @embratur/agent-skills
 
-## Convenções
+# Listar skills disponíveis
+embratur-skills list
 
-Todas as skills seguem 4 regras rígidas:
+# Instalar uma skill específica
+embratur-skills install -s squad-backend
 
-1. **PT-BR.** Nomes, descrições, instruções, exemplos — tudo em português brasileiro.
-2. **Naming híbrido.** Skills temáticas (que ativam um time de personas) usam o prefixo `squad-` — ex.: `squad-backend`, `squad-qualidade`. Skills de processo (que conduzem um ritual ou produzem um artefato) usam substantivo descritivo — ex.: `spec-rastreavel`, `modelo-de-ameacas`, `revisao-pre-pr`. Verbo no infinitivo é evitado porque Lovable e Replit descobrem skills pelo `description`, e o `name` aparece em listas — substantivo descreve melhor.
-3. **`description` no formato "Use when..."** — é o que faz a skill ser descoberta automaticamente pelo agente.
-4. **Personas mantêm consistência.** Laura é sempre Laura, Marina é sempre Marina. Skills temáticas embutem personas, não inventam novas.
+# Instalar múltiplas skills
+embratur-skills install -s squad-backend squad-frontend
 
-## Como contribuir
+# Instalar globalmente
+embratur-skills install -s my-skill -g
+```
+
+### Instalação Global (Opcional)
+
+```bash
+npm install -g @embratur/agent-skills
+embratur-skills
+```
+
+## Estrutura do Projeto
+
+```
+marketplace-skills-embratur/
+├── packages/
+│   ├── skills-catalog/       # Catálogo de skills
+│   │   └── skills/
+│   │       ├── (personas)/   # Skills de personas
+│   │       └── (processo)/   # Skills de processo
+│   └── agent-skills/         # CLI para gerenciar skills
+├── package.json
+├── nx.json
+└── README.md
+```
+
+## Como Contribuir
 
 Veja [`CONTRIBUTING.md`](CONTRIBUTING.md) para adicionar uma skill nova, propor mudança ou reportar bug.
 
-## Guia operacional
+## Guia Operacional
 
-Para o manual de uso do dia a dia — classificação das skills (obrigatórias/essenciais/complementares), como conversar com Coding Agents, prompts prontos, cenários narrados e troubleshooting — veja [`GUIA.md`](GUIA.md). É a leitura recomendada antes de a equipe começar a usar.
-
-## Atribuição
-
-Este pacote é derivado do [`kairos-forge`](https://github.com/VilelaAI/kairos-forge) (MIT, VilelaAI), curado pela Embratur para uso interno e disponibilizado publicamente sob a mesma licença MIT.
-
-A skill `mobilizar` do `kairos-forge` original **não foi portada** — ela depende de Agent Teams nativos do Claude Code e não funciona em Lovable nem em Replit. A skill `mesa-de-personas` substitui o caso de uso conversacional.
+Para o manual de uso do dia a dia, veja [`GUIA.md`](GUIA.md).
 
 ## Licença
 
